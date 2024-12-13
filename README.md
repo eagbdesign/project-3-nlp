@@ -1,20 +1,99 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+README 
 
-# Natural Language Processing Challenge
+# Project 2: Fake News Detector 
+![Fake News](images/fakeimg.jpg)
+## Overview
+The Fake News Detector is a machine learning project using Natural Language Processing (NLP). This AI model classifies news articles as either True or Fake. By leveraging a robust pipeline and comparing various machine learning models, the best-performing model is selected to ensure high accuracy and efficiency.
 
-## Introduction
+## Key Features
+### Model Benchmarking
+Multiple machine learning models were tested and compared to identify the most effective solution:
 
-Learning how to process text is a skill required for Data Scientists. In this project, you will put these skills into practice to identify whether a sentence was automatically translated or translated by a human.
+📊 Naive Bayes
 
-## Project Overview
+🌳 Random Forest
 
-In this repository you will find dataset containing Fake News and Real News, their tags: 0, if it's fake News, 1, if it's Real News. Your goal is to build a classifier that is able to distinguish between the two.
+📈 Logistic Regression
 
-## Guidance
-Like in a real life scenario, you are able to make your own choices and text treatment. Use the techniques you have learned and the common packages to process this data and classify the text.
+💻 Passive-Aggressive Classifier
 
-## Deliverables
+⚙️ Support Vector Machine (SVM)
 
-1. **Python Code:** Provide well-documented Python code that conducts the analysis.
-2. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
-2. **Classified Dataset**: On Friday, you will receive a dataset without tags. Prepare your code to be able to tag that dataset.
+### Best Model
+
+![Best Model Highlight](images/best.png)
+
+
+### Hyperparameter Tuning
+
+While advanced hyperparameter tuning techniques like Grid Search and Random Search were explored, they proved computationally expensive with marginal benefits. A basic SVM configuration was retained for optimal performance.
+
+### NLP Pipeline
+
+The system implements a comprehensive NLP pipeline to preprocess and analyze text:
+
+* Text Cleaning
+
+* Tokenization
+
+* TF-IDF Vectorization
+
+
+
+
+## 📊 Results
+
+### SVM Performance Metrics
+
+#### Accuracy
+| Metric                | Value  |
+|-----------------------|--------|
+| **Training Accuracy** | 0.97   |
+| **Testing Accuracy**  | 0.94   |
+
+#### Classification Report
+| Label       | Precision | Recall | F1-Score | Support |
+|-------------|-----------|--------|----------|---------|
+| **0 (True)**| 0.95      | 0.94   | 0.94     | 5295    |
+| **1 (Fake)**| 0.93      | 0.95   | 0.94     | 4951    |
+| **Overall Accuracy** | **0.94** |
+
+#### Averages
+| Metric       | Value  |
+|--------------|--------|
+| **Macro Avg.**   | 0.94   |
+| **Weighted Avg.**| 0.94   |
+
+![svm](images/SVM.png)
+
+
+## Unlabeled Dataset Predictions
+### Predicted Label Distribution
+
+| Label  | Count |
+|--------|-------|
+| **True** | 5244  |
+| **Fake** | 4740  |
+
+![Unlabeled Predictions](images/pred.png)
+
+
+## 🔍 Limitations & Future Improvements
+
+### Computational Efficiency
+
+Advanced hyperparameter tuning like Grid Search and Random Search was computationally expensive and yielded negligible improvements.
+Future efforts could leverage cloud-based or distributed computing for such tasks.
+
+### Advanced Models
+
+Incorporating deep learning architectures like Transformers (e.g., BERT) could further enhance accuracy and generalizability.
+
+### Dataset Diversity
+
+Expanding the dataset to include more diverse and global sources would improve the model's robustness and applicability.
+
+
+
+
+ 
